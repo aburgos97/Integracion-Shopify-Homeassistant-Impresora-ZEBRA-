@@ -1,0 +1,18 @@
+- id: '1744860000004'
+  alias: Recibir pedido de Shopify e imprimir por ítem
+  trigger:
+    - platform: webhook
+      webhook_id: imprimir_etiqueta_shopify
+      allowed_methods: [POST, PUT]
+      local_only: false
+  action:
+    - repeat:
+        for_each: "{{ trigger.json.line_items }}"
+        sequence:
+          - service: shell_command.imprimir_etiqueta
+            data:
+              zpl_content: >
+                ^XA
+                # Coloca el contenido ZPL de tu etiqueta
+                ^XZ
+  mode: single
