@@ -23,9 +23,9 @@ Este proyecto documenta cómo integrar Shopify con Home Assistant para imprimir 
 
 ├── README.md
 ├── home_assistant/
-  ├── automation.yaml
-  ├── configuration.yaml
-
+│ ├── automation.yaml
+│ ├── shell_command.yaml
+│ └── configuration.yaml
 
 **TIP EXTRA**
 
