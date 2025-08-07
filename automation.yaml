@@ -1,0 +1,3 @@
+shell_command:
+  imprimir_etiqueta: >-
+    bash -c "echo '{{ zpl_content | replace('\n','') }}' | nc "IP DE LA IMPRESORA" "PUERTO DE LA IMPRESORA""
